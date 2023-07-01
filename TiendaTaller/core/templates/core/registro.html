@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+<!-- Aquí empieza el formulario-->
+        <form id="registrocolor">
+          <!-- aqui estan todos los parametros que se piden -->
+          <h1>Crea una cuenta</h1>
+          <hr>
+          <div class="form-group">
+            <label for="rut">RUT:</label>
+            <input type="number" id="rut" name="rut" placeholder="ex: 41967969-6">
+          </div>
+
+          <div class="form-group">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres">
+          </div>
+
+          <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+          </div>
+
+          <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="example@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="direccion" id="direccion" name="direccion">
+          </div>
+
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="miCheckbox">
+              <label class="form-check-label" for="miCheckbox">
+                Subscripcion
+              </label>
+          </div>
+          </div>
+          <div class="form-group">
+            <label for="foto">Foto de perfil:</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+          </div>
+
+          <div class="form-group">
+            <label for="contra">Contraseña:</label>
+            <input type="password" id="contra" name="contra">
+          </div>
+          
+          <div class="form-group">
+            <label for="recontra">Repetir contraseña:</label>
+            <input type="password" id="recontra" name="recontra">
+          </div> 
+            <!-- boton registrar -->
+          <input type="submit" value="Registrar" class="btn btn-success" onclick="return registrar()">
+
+          <!-- mensajes emergente de registro completado o no completado -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <div id="succes" style="display: none;"> registro completado, puedes volver al inicio.</div>
+                <div  id="error" style="display: block;"> </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

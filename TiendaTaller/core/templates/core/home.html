@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container text-center">
+        <div style="margin-top: 30px;">
+            <h1>Taller Mecanico</h1>
+        </div>
+        <div style="margin-top: 60px;">
+            <img src="{% static 'core/img/home.jpg'%}" width="500px" alt="">
+        </div>
+        <div style="margin-top: 30px;">
+            <a class="btn btn-primary" href="{% url 'vehiculo' 'ins' -1 %}">Mantenedor de vehiculos</a>
+        </div>
+        <div style="margin-top: 30px;">
+            <a class="btn btn-success" href="{% url 'vehiculo_tienda' %}">Entrar a la tienda</a>
+        </div>
+    </div>
+    {% endblock %}

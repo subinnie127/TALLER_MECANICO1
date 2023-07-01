@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <h1 style="text-align: center !important;">
+            Servicio Taller Mecanico
+        </h1>
+        <br><br>
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="mx-auto col-sm-12 col-md-6 col-lg-6 col-xl-6 ficha_auto_recuadro">
+                    <img src="/media/{{ vehiculo.imagen }}" class="ficha_auto_imagen" alt="">
+                </div>
+                <div class="mx-auto col-sm-12 col-md-6 col-lg-6 col-xl-6 ficha_datos_recuadro">
+                    <h1>
+                        Marca: {{ vehiculo.marca }}<br><br>
+                    </h1>
+                    <h2>
+                        Modelo: {{ vehiculo.modelo }}<br><br>
+                    </h2>
+                    <h3>
+                        Patente: {{ vehiculo.patente }}<br><br>
+                    </h3>
+                    <h4>
+                        servicio: {{ vehiculo.servicio }}<br><br>
+                    </h4>
+                    <h5>
+                        detalle_servicio: {{ vehiculo.detalle_servicio }}<br><br>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="{% url 'vehiculo_tienda' %}" class="btn btn-info btn-sm">Volver a la tienda</a>&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'home' %}" class="btn btn-info btn-sm">Volver al inicio</a>
+    </div>
+
+{% endblock %}
