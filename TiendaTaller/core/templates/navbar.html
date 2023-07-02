@@ -4,6 +4,7 @@
         <!-- ACA COLOCAMOS EL LOGO DE LA EMPRESA EN EL LADO IZQUIERDO DE LA BARRA DE NAVEGACION -->
         <link rel="stylesheet" href="..." type="text/css">
         <!-- NOMBRAMOS LA EMPRESA EN LA BARRA DE NAVEGACION -->
+        <img src="{% get_media_prefix %}images/ruta_del_logo.png" alt="">
         <a class="navbar-brand" href="#" id="navletra">Rayo Makween</a>
         <!-- CARACTERISTICAS DE LOS BOTONES EN LA BARRA DE NAVEGACION -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
@@ -17,8 +18,7 @@
                 <a class="nav-link" href="{% url 'vehiculo_tienda' %}" id="navletra">Trabajos Realizados</a>
                 <a class="nav-link" href="{% url 'contacto' %}" id="navletra">Contacto</a>
                 <a class="nav-link" href="{% url 'nosotros' %}" id="navletra">Sobre nosotros</a>
-                <a class="nav-link" href="{% url 'iniciosesion' %}" id="navletra">Iniciar Sesión</a>
-                <a class="nav-link" href="{% url 'registro' %}" id="navletra">Registrate</a>
+                <a class="nav-link" href="{% url 'vehiculo' 'ins' -1 %}" id="navletra">Mantenedor</a>
             </div>
         </div>
     </div>
